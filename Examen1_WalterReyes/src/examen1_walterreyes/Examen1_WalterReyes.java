@@ -333,6 +333,7 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Crear Personas", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(255, 51, 51));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Ver_Armas.setEditable(false);
@@ -373,6 +374,7 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Editar Arma", jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(255, 204, 204));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Ver_Personas.setEditable(false);
@@ -570,7 +572,7 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
             int ar = 0;
             do {
                 ar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese tipo de arma: \n 1.Hacha \n 2. pistola \n 3. bate \n 4.pala \n 5.Sierra \n 6 puños"));
-            } while (ar < 0 || ar > armas.size());
+            } while (ar < 0 || ar >6);
 
             if (ar == 1) {
                 arma = "Hacha";
@@ -705,7 +707,7 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
                             "Ocurrio un error y no se guardaron los datos");
                 }
 
-                JOptionPane.showMessageDialog(null, "Campista guardado exitosamente");
+                
                  String cadena = "";
             for (Object t : personas) {
                 cadena += personas.indexOf(t) + "." + t + "\n";
@@ -751,7 +753,7 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this,
                             "Ocurrio un error y no se guardaron los datos");
                 }
-                JOptionPane.showMessageDialog(null,"Jason editado correctamente");
+                
              String caden1 = "";
             for (Object t : personas) {
                 caden1 += personas.indexOf(t) + "." + t + "\n";
