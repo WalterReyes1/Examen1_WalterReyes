@@ -31,7 +31,7 @@ public class Armas {
 
     @Override
     public String toString() {
-        return "Armas{" + "tipo=" + tipo + ", da\u00f1o=" + daño + '}';
+        return   "Nombre: " + tipo + ", Porcentaje de daño: " + daño + "%";
     }
   
 }

@@ -67,6 +67,23 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         Desaparecidos = new javax.swing.JTextField();
         Botón_Guardar = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Ver_Armas = new javax.swing.JTextArea();
+        Posición_Armas = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        Botón_Editar_Arma = new javax.swing.JButton();
+        Botón_Eliminar_Arma = new javax.swing.JButton();
+        Botón_ver_armas = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Ver_Personas = new javax.swing.JTextArea();
+        jLabel15 = new javax.swing.JLabel();
+        Posición = new javax.swing.JTextField();
+        Editar = new javax.swing.JButton();
+        Mostrar = new javax.swing.JButton();
+        Eliminar = new javax.swing.JButton();
 
         jLabel12.setText("Personas desaparecidas");
 
@@ -166,6 +183,12 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
         Botón_Femenino.setText("F");
 
         jLabel7.setText("Armas");
+
+        cb_armas_personas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_armas_personasActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("TIpo de persona");
 
@@ -310,6 +333,85 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Crear Personas", jPanel2);
 
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Ver_Armas.setEditable(false);
+        Ver_Armas.setColumns(20);
+        Ver_Armas.setRows(5);
+        jScrollPane1.setViewportView(Ver_Armas);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 11, 358, 197));
+        jPanel3.add(Posición_Armas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 60, -1));
+
+        jLabel14.setText("Colocar Posición a editar");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, -1, -1));
+        jPanel3.add(jTabbedPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, -1));
+
+        Botón_Editar_Arma.setText("Editar");
+        Botón_Editar_Arma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botón_Editar_ArmaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Botón_Editar_Arma, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 80, 50));
+
+        Botón_Eliminar_Arma.setText("Eliminar");
+        Botón_Eliminar_Arma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botón_Eliminar_ArmaActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Botón_Eliminar_Arma, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 90, 50));
+
+        Botón_ver_armas.setText("Ver datos");
+        Botón_ver_armas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Botón_ver_armasActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Botón_ver_armas, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, -1, -1));
+
+        jTabbedPane1.addTab("Editar Arma", jPanel3);
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Ver_Personas.setEditable(false);
+        Ver_Personas.setColumns(20);
+        Ver_Personas.setRows(5);
+        jScrollPane2.setViewportView(Ver_Personas);
+
+        jPanel4.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 580, 170));
+
+        jLabel15.setText("Inserte Posición");
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, -1));
+        jPanel4.add(Posición, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 60, -1));
+
+        Editar.setText("Editar");
+        Editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Editar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 80, 40));
+
+        Mostrar.setText("Mostrar");
+        Mostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MostrarActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Mostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 80, 40));
+
+        Eliminar.setText("Eliminar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 80, 40));
+
+        jTabbedPane1.addTab("Editar Personas", jPanel4);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -318,7 +420,7 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 406, Short.MAX_VALUE)
         );
 
         pack();
@@ -345,90 +447,329 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
         float Daño;
         arma = cb_armas.getSelectedItem().toString();
         Daño = Float.parseFloat(daño.getText());
-       Armas x = new Armas(arma,Daño);
-       armas.add(x);
-       daño.setText(""); 
-       JOptionPane.showMessageDialog(null,"Arma ingresada correctamente");
-       DefaultComboBoxModel dc=
-                    (DefaultComboBoxModel) cb_armas_personas.getModel();
-                dc.addElement(x.getTipo());
-                cb_armas_personas.setModel(dc);
+        Armas x = new Armas(arma, Daño);
+        armas.add(x);
+        daño.setText("");
+        JOptionPane.showMessageDialog(null, "Arma ingresada correctamente");
+        DefaultComboBoxModel dc
+                = (DefaultComboBoxModel) cb_armas_personas.getModel();
+        dc.addElement(x.getTipo());
+        cb_armas_personas.setModel(dc);
     }//GEN-LAST:event_Botón_armaActionPerformed
 
     private void Botón_GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botón_GuardarActionPerformed
-        if(Botón_Campista.isSelected()){
-            try{
-                
-            String nombre;
-            int edad;
-            String sexo= "";
-            Armas arma;
-            
-            String estado = "";
-           String tipo_campista ="";
-            nombre = Nombre.getText();
-            edad = Integer.parseInt(Edad.getText());
-            if(Botón_Masculino.isSelected()){
-                sexo ="Hombre";
-            }else{
-                sexo = "Mujer";
-            }
-            arma =(Armas)cb_armas_personas.getSelectedItem();
-            
-            if(Botón_Vivo.isSelected()){
-                estado = "Vivo";
-            }else{
-                estado = "Desaparecido";
-            }
-            if(Botón_Normal.isSelected()){
-                tipo_campista ="Normal";
-            }else{
-               tipo_campista = "Supervisor"; 
-            }
-            Campistas c = new Campistas(tipo_campista,estado,nombre,edad,sexo,arma); 
+        if (Botón_Campista.isSelected()) {
+            try {
+
+                String nombre;
+                int edad;
+                String sexo = "";
+                Armas arma;
+
+                String estado = "";
+                String tipo_campista = "";
+                nombre = Nombre.getText();
+                edad = Integer.parseInt(Edad.getText());
+                if (Botón_Masculino.isSelected()) {
+                    sexo = "Hombre";
+                } else {
+                    sexo = "Mujer";
+                }
+                int x;
+                x = cb_armas_personas.getSelectedIndex();
+                arma = (armas.get(x));
+                if (Botón_Vivo.isSelected()) {
+                    estado = "Vivo";
+                } else {
+                    estado = "Desaparecido";
+                }
+                if (Botón_Normal.isSelected()) {
+                    tipo_campista = "Normal";
+                } else {
+                    tipo_campista = "Supervisor";
+                }
+                Campistas c = new Campistas(tipo_campista, estado, nombre, edad, sexo, arma);
+                personas.add(c);
             } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,
-                 "Ocurrio un error y no se guardaron los datos");
-        } 
-           
-           JOptionPane.showMessageDialog(null,"Campista guardado exitosamente");
-            
-             
-            
-            
+                JOptionPane.showMessageDialog(this,
+                        "Ocurrio un error y no se guardaron los datos");
+            }
+
+            JOptionPane.showMessageDialog(null, "Campista guardado exitosamente");
+            Nombre.setText("");
+            Edad.setText("");
+
         }
-        if(Botón_Jason.isSelected()){
+        if (Botón_Jason.isSelected()) {
             
-              try{
-                
-            String nombre;
-            int edad;
-            String sexo;
-            Armas arma;
-            int desaparecidos;
-            nombre = Nombre.getText();
-            edad = Integer.parseInt(Edad.getText());
-            if(Botón_Masculino.isSelected()){
-                sexo ="Hombre";
-            }else{
-                sexo = "Mujer";
-            }
-            arma = (Armas)cb_armas_personas.getSelectedItem();
-            desaparecidos = Integer.parseInt(Desaparecidos.getText());
+            try {
+
+                String nombre = "";
+                int edad;
+                String sexo = "";
+                Armas arma;
+                int desaparecidos;
+                nombre = Nombre.getText();
+                edad = Integer.parseInt(Edad.getText());
+                if (Botón_Masculino.isSelected()) {
+                    sexo = "Hombre";
+                } else {
+                    sexo = "Mujer";
+                }
+                int x;
+                x = cb_armas_personas.getSelectedIndex();
+                arma = (armas.get(x));
+                desaparecidos = Integer.parseInt(Desaparecidos.getText());
+
+                el_wapo_hockero_asesino e = new el_wapo_hockero_asesino(desaparecidos, nombre, edad, sexo, arma);
+                personas.add(e);
             } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,
-                 "Ocurrio un error y no se guardaron los datos");
-        }   
+                JOptionPane.showMessageDialog(this,
+                        "Ocurrio un error y no se guardaron los datos");
+            }
+            JOptionPane.showMessageDialog(null, "Jason guardado exitosamente");
+             Nombre.setText("");
+            Edad.setText("");
+            Desaparecidos.setText("");
         }
     }//GEN-LAST:event_Botón_GuardarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void Botón_ver_armasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botón_ver_armasActionPerformed
+        String cadena = "";
+        for (Object t : armas) {
+            cadena += armas.indexOf(t) + "." + t +"\n";
+        }
+        Ver_Armas.setText(cadena);
+    }//GEN-LAST:event_Botón_ver_armasActionPerformed
+
+    private void Botón_Eliminar_ArmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botón_Eliminar_ArmaActionPerformed
+        int borrar;
+        borrar = Integer.parseInt(Posición_Armas.getText());
+        if (borrar > armas.size()) {
+            JOptionPane.showMessageDialog(null, "Posición invalida");
+
+        } else {
+            armas.remove(borrar);
+            String cadena = "";
+            for (Object t : armas) {
+                cadena += armas.indexOf(t) + "." + t + "\n";
+            }
+            Ver_Armas.setText(cadena);
+            cb_armas_personas.removeItemAt(borrar);
+        }
+    }//GEN-LAST:event_Botón_Eliminar_ArmaActionPerformed
+
+    private void Botón_Editar_ArmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Botón_Editar_ArmaActionPerformed
+        int editar;
+        editar = Integer.parseInt(Posición_Armas.getText());
+        if (editar > armas.size()) {
+            JOptionPane.showMessageDialog(null, "Posición invalida");
+
+        } else {
+            String arma = "";
+            int ar = 0;
+            do {
+                ar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese tipo de arma: \n 1.Hacha \n 2. pistola \n 3. bate \n 4.pala \n 5.Sierra \n 6 puños"));
+            } while (ar < 0 || ar > armas.size());
+
+            if (ar == 1) {
+                arma = "Hacha";
+            }
+            if (ar == 2) {
+                arma = "Pistola";
+            }
+            if (ar == 3) {
+                arma = "Bate";
+            }
+            if (ar == 4) {
+                arma = "Pala";
+            }
+            if (ar == 5) {
+                arma = "Sierra eléctrica";
+            }
+            if (ar == 6) {
+                arma = "Puños";
+            }
+            int daño1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el daño: "));
+            Armas a = new Armas(arma, daño1);
+            armas.set(editar, a);
+            cb_armas_personas.insertItemAt(a.getTipo(), editar);
+            String cadena = "";
+            for (Object t : armas) {
+                cadena += armas.indexOf(t) + "." + t + "\n";
+            }
+            Ver_Armas.setText(cadena);
+
+        }
+    }//GEN-LAST:event_Botón_Editar_ArmaActionPerformed
+
+    private void MostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarActionPerformed
+        String cadena = "";
+        for (Object t : personas) {
+            cadena += personas.indexOf(t) + "." + t + "\n";
+        }
+        Ver_Personas.setText(cadena);
+
+
+    }//GEN-LAST:event_MostrarActionPerformed
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+        int borrar;
+        borrar = Integer.parseInt(Posición.getText());
+        if (borrar > personas.size()) {
+            JOptionPane.showMessageDialog(null, "Posición invalida");
+
+        } else {
+            personas.remove(borrar);
+            String cadena = "";
+            for (Object t : personas) {
+                cadena += personas.indexOf(t) + "." + t + "\n";
+            }
+            Ver_Personas.setText(cadena);
+
+        }    }//GEN-LAST:event_EliminarActionPerformed
+
+    private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
+        int editar;
+        editar = Integer.parseInt(Posición.getText());
+        if (editar > personas.size()) {
+            JOptionPane.showMessageDialog(null, "Posición invalida");
+
+        } else {
+            
+            int x = 0;
+            do {
+                x = Integer.parseInt(JOptionPane.showInputDialog("1- Campista \n 2- Jason \n: "));
+
+            } while (x < 0 || x > 2);
+            try {
+            if (x == 1) {
+
+                    String nombre;
+                    int edad;
+                    String sexo = "";
+                    Armas arma;
+
+                    String estado = "";
+                    String tipo_campista = "";
+                    nombre = JOptionPane.showInputDialog("Ingrese nombre: ");
+                    edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese edad: "));
+                    int y;
+                    do {
+                        y = Integer.parseInt(JOptionPane.showInputDialog("Usted es? \n 1- Hombre \n 2- Mujer \n: "));
+                    } while (y < 0 || y > 2);
+                    if (7 == 1) {
+                        sexo = "Hombre";
+                    } else {
+                        sexo = "Mujer";
+                    }
+                    String cadena = "";
+                    for (Object t : armas) {
+                        cadena += armas.indexOf(t) + "." + t + "\n";
+                        Ver_Personas.setText(cadena);
+                    }
+                    JOptionPane.showMessageDialog(null,"Mire la pantalla del programa");
+                    int z;
+                    do{
+                    z = Integer.parseInt(JOptionPane.showInputDialog("Ingrese una arma: "));
+                        
+                    }while(z<0 || z>armas.size());
+                            
+                    arma = armas.get(z);
+                    int w;
+                    do{
+                   w = Integer.parseInt( JOptionPane.showInputDialog("1-Vivo \n 2- Desaparecido \n : "));
+                        
+                    }while(w<1 || w > 2);
+
+                    if (w==1) {
+                        estado = "Vivo";
+                    } else {
+                        estado = "Desaparecido";
+                    }
+                    int m;
+                    do{
+                    m= Integer.parseInt( JOptionPane.showInputDialog("1-Normal \n 2- Suprevisor \n : "));
+                        
+                    }while(m<1 || m > 2);
+                    if (m==2) {
+                        tipo_campista = "Normal";
+                    } else {
+                        tipo_campista = "Supervisor";
+                    }
+                    Campistas c = new Campistas(tipo_campista, estado, nombre, edad, sexo, arma);
+                    personas.set(editar,c);
+            }    
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(this,
+                            "Ocurrio un error y no se guardaron los datos");
+                }
+
+                JOptionPane.showMessageDialog(null, "Campista guardado exitosamente");
+                 String cadena = "";
+            for (Object t : personas) {
+                cadena += personas.indexOf(t) + "." + t + "\n";
+            }
+            Ver_Personas.setText(cadena);
+            if(x== 2){
+                try{
+                String nombre = "";
+                int edad;
+                String sexo = "";
+                Armas arma;
+                        
+              nombre = JOptionPane.showInputDialog("Ingrese nombre: ");
+                    edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese edad: "));
+                    int y;
+                    do {
+                        y = Integer.parseInt(JOptionPane.showInputDialog("Usted es? \n 1- Hombre \n 2- Mujer \n: "));
+                    } while (y < 0 || y > 2);
+                    if (7 == 1) {
+                        sexo = "Hombre";
+                    } else {
+                        sexo = "Mujer";
+                    }
+                    String cadena1 = "";
+                    for (Object t : armas) {
+                        cadena1 += armas.indexOf(t) + "." + t + "\n";
+                        Ver_Personas.setText(cadena1);
+                    }
+                    JOptionPane.showMessageDialog(null,"Mire la pantalla del programa");
+                    int z;
+                    do{
+                    z = Integer.parseInt(JOptionPane.showInputDialog("Ingrese una arma: "));
+                        
+                    }while(z<0 || z>armas.size());
+                            
+                    arma = armas.get(z); 
+                    int h;
+                    
+                    h =Integer.parseInt(JOptionPane.showInputDialog("Ingrese cantidad de gente que ayudó a desaparecer: "));
+                el_wapo_hockero_asesino b = new el_wapo_hockero_asesino(h, nombre, edad, sexo, arma);
+                personas.set(editar,b);
+                }catch(Exception e) {
+                    JOptionPane.showMessageDialog(this,
+                            "Ocurrio un error y no se guardaron los datos");
+                }
+                JOptionPane.showMessageDialog(null,"Jason editado correctamente");
+             String caden1 = "";
+            for (Object t : personas) {
+                caden1 += personas.indexOf(t) + "." + t + "\n";
+            }
+            Ver_Personas.setText(caden1);
+            }
+        }
+    }//GEN-LAST:event_EditarActionPerformed
+
+    private void cb_armas_personasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_armas_personasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cb_armas_personasActionPerformed
+
     public void main() {
         initComponents();
-        
+
     }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -464,6 +805,8 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Botón_Campista;
     private javax.swing.JRadioButton Botón_Desaparecido;
+    private javax.swing.JButton Botón_Editar_Arma;
+    private javax.swing.JButton Botón_Eliminar_Arma;
     private javax.swing.JRadioButton Botón_Femenino;
     private javax.swing.JButton Botón_Guardar;
     private javax.swing.JRadioButton Botón_Jason;
@@ -472,9 +815,17 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
     private javax.swing.JRadioButton Botón_Supervisor;
     private javax.swing.JRadioButton Botón_Vivo;
     private javax.swing.JButton Botón_arma;
+    private javax.swing.JButton Botón_ver_armas;
     private javax.swing.JTextField Desaparecidos;
     private javax.swing.JTextField Edad;
+    private javax.swing.JButton Editar;
+    private javax.swing.JButton Eliminar;
+    private javax.swing.JButton Mostrar;
     private javax.swing.JTextField Nombre;
+    private javax.swing.JTextField Posición;
+    private javax.swing.JTextField Posición_Armas;
+    private javax.swing.JTextArea Ver_Armas;
+    private javax.swing.JTextArea Ver_Personas;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -487,6 +838,8 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -497,8 +850,13 @@ public class Examen1_WalterReyes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     // End of variables declaration//GEN-END:variables
 ArrayList<Armas> armas = new ArrayList();
-ArrayList<Personas> personas = new ArrayList();
+    ArrayList<Personas> personas = new ArrayList();
 }

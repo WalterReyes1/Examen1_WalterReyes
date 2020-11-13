@@ -24,7 +24,7 @@ protected int rip;
 
     @Override
     public String toString() {
-        return  super.toString()+ "Gente que ayudó a desaparecer" + rip + "\n";
+        return  super.toString()+"Jasons: "+"Gente que ayudó a desaparecer" + rip + "\n";
     }
     
     

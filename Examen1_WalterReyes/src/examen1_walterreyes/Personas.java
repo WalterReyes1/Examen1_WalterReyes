@@ -60,7 +60,7 @@ protected Armas arma;
 
     @Override
     public String toString() {
-        return "Personas{" + "nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", arma=" + arma + '}';
+        return   "nombre: " + nombre + ", edad: " + edad + ", sexo: " + sexo + ", arma: " + arma ;
     }
 
    
